@@ -39,7 +39,6 @@ function entrar() {
         inputSenha.style.borderColor = 'red';
         lbSenha.setAttribute('style', 'color: red');
     } else if(inputUsuario.value == userValido.usuario && inputSenha.value == userValido.senha) {
-        alert("Parabéns Rafael, você nasceu para voar!");
         inputUsuario.style.borderColor = '#4038A0';
         lbUsuario.setAttribute('style', 'color: #4038A0');
         inputSenha.style.borderColor = '#4038A0';
