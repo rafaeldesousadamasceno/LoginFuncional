@@ -34,9 +34,9 @@ inputNome.addEventListener('keyup', () => {
 });
 
 inputUsuario.addEventListener('keyup', () => {
-    if (inputUsuario.value.length < 5) {
+    if (inputUsuario.value.length < 3) {
         labelUsuario.setAttribute('style', 'color: red');
-        labelUsuario.innerHTML = 'Usuário * (É necessário pelo ao menos 5 caracteres)';
+        labelUsuario.innerHTML = 'Usuário * (É necessário pelo ao menos 3 caracteres)';
         inputUsuario.setAttribute('style', 'border-color: red');
         usuarioValido = 0;
     } else {
