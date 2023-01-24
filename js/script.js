@@ -1,5 +1,5 @@
 if(localStorage.getItem('token') != null) {
-    window.location.href = 'inicio.html';
+    window.location.href = 'https://damascenologin.netlify.app/inicio.html';
 }
 
 let btn = document.querySelector('.fa-eye');
@@ -47,7 +47,7 @@ function entrar() {
         msgErro.setAttribute('style', 'display: none');
 
         setTimeout(() => {
-            window.location.href = "inicio.html";
+            window.location.href = "https://damascenologin.netlify.app/";
         }, 200);
 
 
@@ -58,6 +58,9 @@ function entrar() {
         let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);
         localStorage.setItem('token', token);
 
+        /**
+         * Criar um objeto no LocalStorage com os dados do usuário Logado
+         */
         localStorage.setItem('usuarioLogado', JSON.stringify(userValido));      
 
     } else {
