@@ -34,7 +34,7 @@ inputNome.addEventListener('keyup', () => {
 });
 
 inputUsuario.addEventListener('keyup', () => {
-    if (inputUsuario.value.length < 6) {
+    if (inputUsuario.value.length < 5) {
         labelUsuario.setAttribute('style', 'color: red');
         labelUsuario.innerHTML = 'Usuário * (É necessário pelo ao menos 5 caracteres)';
         inputUsuario.setAttribute('style', 'border-color: red');
@@ -48,9 +48,9 @@ inputUsuario.addEventListener('keyup', () => {
 });
 
 inputSenha.addEventListener('keyup', () => {
-    if (inputSenha.value.length < 8) {
+    if (inputSenha.value.length < 6) {
         labelSenha.setAttribute('style', 'color: red');
-        labelSenha.innerHTML = 'Senha * (É necessário pelo ao menos 8 caracteres)';
+        labelSenha.innerHTML = 'Senha * (É necessário pelo ao menos 6 caracteres)';
         inputSenha.setAttribute('style', 'border-color: red');
         senhaValida = 0;
     } else {
@@ -58,6 +58,18 @@ inputSenha.addEventListener('keyup', () => {
         labelSenha.innerHTML = 'Senha';
         inputSenha.setAttribute('style', 'border-color: green');
         senhaValida = 1;
+    }
+
+    if (inputSenha.value != inputConfirmarSenha.value) {
+        labelConfirmarSenha.setAttribute('style', 'color: red');
+        labelConfirmarSenha.innerHTML = 'Confirmar Senha * (Senhas Diferentes)';
+        inputConfirmarSenha.setAttribute('style', 'border-color: red');
+        confirmarSenhaValida = 0;
+    } else {
+        labelConfirmarSenha.setAttribute('style', 'color: #4038A0');
+        labelConfirmarSenha.innerHTML = 'Confirmar Senha';
+        inputConfirmarSenha.setAttribute('style', 'border-color: green');
+        confirmarSenhaValida = 1;
     }
 });
 
@@ -96,7 +108,7 @@ function cadastrar() {
         msgSucesso.innerHTML = '<strong>Cadastrando com sucesso...</strong>';
 
         setTimeout(() => {
-            window.location.href = 'https://damascenologin.netlify.app';
+            window.location.href = 'index.html';
         }, 3000);
         
     } else {

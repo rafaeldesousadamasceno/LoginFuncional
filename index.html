@@ -12,17 +12,20 @@
     <div class="container">
         <div class="card">
             <h1>Entrar</h1>
+            
+            <div id="msgErro"></div>
+
             <div class="label-float">
                 <input type="text" name="usuario" id="usuario" placeholder="" autocomplete="off" required>
-                <label for="usuario">Usuário</label>
+                <label id="lbUsuario" for="usuario">Usuário</label>
             </div>
             <div class="label-float">
                 <input type="password" name="senha" id="senha" placeholder="" autocomplete="off" required>
-                <label for="senha">Senha</label>
+                <label id="lbSenha" for="senha">Senha</label>
                 <i class="fa fa-eye" aria-hidden="true"></i>
             </div>
             <div class="justify-center">
-                <button>Entrar</button>
+                <button onclick="entrar()">Entrar</button>
             </div>
             <div class="justify-center">
                 <hr>                
