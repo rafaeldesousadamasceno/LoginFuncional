@@ -16,9 +16,9 @@ function entrar() {
     let listaUsers = [];
 
     let userValido = {
-        nome: '',
-        usuario: '',
-        senha: ''
+        nome: null,
+        usuario: null,
+        senha: null
     }
 
     listaUsers = JSON.parse(localStorage.getItem('listaUser'));
