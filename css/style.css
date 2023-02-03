@@ -144,11 +144,11 @@ footer {
     text-align: center;
     bottom: 0;
     background-color: #272262;
-    color: #FFF;
     height: 40px;    
     width: 100%;
 }
 
 footer p {
+    color: #FFF;
     padding-top: 10px;
 }
