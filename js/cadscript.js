@@ -105,11 +105,11 @@ function cadastrar() {
 
         msgSucesso.style.display = 'block';
         msgErro.style.display = 'none';
-        msgSucesso.innerHTML = '<strong>Cadastrando com sucesso...</strong>';
+        msgSucesso.innerHTML = '<strong>Cadastrado com sucesso</strong>';
 
         setTimeout(() => {
-            window.location.href = 'index.html';
-        }, 3000);
+            window.location.href = 'index.html';           
+        }, 500);
         
     } else {
         msgSucesso.style.display = 'none';
